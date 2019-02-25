@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Samuel Nogalski</Authors>
+    <Copyright>2019 Samuel Nogalski</Copyright>
+    <RepositoryUrl>https://github.com/nogalskisam/PwnedChecker</RepositoryUrl>
+    <PackageLicenseUrl>https://github.com/nogalskisam/PwnedChecker/blob/master/LICENSE</PackageLicenseUrl>
+    <Description>Client to call the v2 HaveIBeenPwned.com API by Troy Hunt</Description>
+    <PackageTags>HaveIBeenPwned, pwned, password checker, security</PackageTags>
+    <PackageProjectUrl>https://github.com/nogalskisam/PwnedChecker</PackageProjectUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Flurl" Version="2.8.1" />
+    <PackageReference Include="Flurl.Http" Version="2.4.1" />
+  </ItemGroup>
+
+</Project>

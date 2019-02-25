@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PwnedChecker", "PwnedChecker\PwnedChecker.csproj", "{453DCA45-3758-452F-9F6E-9B9161F25A34}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PwnedChecker.Tests", "PwnedChecker.Tests\PwnedChecker.Tests.csproj", "{6A580FAC-96E1-433F-910D-FF139A145A67}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{453DCA45-3758-452F-9F6E-9B9161F25A34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{453DCA45-3758-452F-9F6E-9B9161F25A34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{453DCA45-3758-452F-9F6E-9B9161F25A34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{453DCA45-3758-452F-9F6E-9B9161F25A34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A580FAC-96E1-433F-910D-FF139A145A67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A580FAC-96E1-433F-910D-FF139A145A67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A580FAC-96E1-433F-910D-FF139A145A67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A580FAC-96E1-433F-910D-FF139A145A67}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A8EBF446-CC3B-48FA-8C60-955B80168985}
+	EndGlobalSection
+EndGlobal
