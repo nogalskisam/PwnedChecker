@@ -3,6 +3,7 @@ using NUnit.Framework;
 using PwnedChecker.Exceptions;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
@@ -85,6 +86,40 @@ E3BE53CC21EED5E20A29A582D9E53729CD8:6";
 
             // Assert
             Assert.AreEqual(0, actual);
+        }
+
+        [TestCase("password", "5BAA6")]
+        [TestCase("ilikecats", "7AB18")]
+        public async Task CheckPassword_CallToPwnedPasswords_SendsFirstFiveCharacters(string password, string hash)
+        {
+            // Arrange
+            var sut = GetSut();
+
+            // Act
+            var actual = await sut.CheckPassword(password);
+
+            // Assert
+            Assert.That(_httpTest.CallLog
+                                    .Any(call => call.FlurlRequest
+                                                        .Url
+                                                        .Path.Contains(hash)));
+        }
+
+        [TestCase("password", "5BAA61")]
+        [TestCase("ilikecats", "7AB180")]
+        public async Task CheckPassword_CallToPwnedPasswords_DoesNotSendMoreThanFiveCharacters(string password, string hash)
+        {
+            // Arrange
+            var sut = GetSut();
+
+            // Act
+            var actual = await sut.CheckPassword(password);
+
+            // Assert
+            Assert.That(!_httpTest.CallLog
+                                    .Any(call => call.FlurlRequest
+                                                        .Url
+                                                        .Path.Contains(hash)));
         }
     }
 }
